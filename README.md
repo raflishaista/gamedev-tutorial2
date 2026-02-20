@@ -1,3 +1,6 @@
+Rafli Aditya Shaista
+2206083306
+
 Apa saja pesan log yang dicetak pada panel Output?
 
 -Platform initialized
