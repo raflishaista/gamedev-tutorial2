@@ -23,16 +23,14 @@ Ubah nilai atribut Mass pada tipe RigidBody2D secara bebas di scene BlueShip, la
 
 Perubahan mass akan mempengaruhi interaksi dari pesawat dengan benda-bendanya, dimana disini berinteraksi dengan gerak pesawat yang didorong oleh platform. Mass yang lebih kecil akan membuat pesawat digerakkan lebih cepat, namun mass yang lebih besar akan membuat pesawat digerakkan lebih susah dan lambat.
 
-
 Ubah nilai atribut Disabled milik node CollisionShape2D pada scene StonePlatform, lalu coba jalankan scene MainLevel. Apa yang terjadi?
 
 Dengan tidak adanya deteksi penyentuhan, maka CollisionShape2D di ObjectiveArea tidak akan mendeteksi jika pesawat menyentuhnya, sehingga tidak ada dialog yang muncul ketika di areanya.
 
-
 Pada scene MainLevel, coba manipulasi atribut Position, Rotation, dan Scale milik node BlueShip secara bebas. Apa yang terjadi pada visualisasi BlueShip di Viewport?
 
-Nilai position node, yang ditampilkan di Node2D di Inspector merupakan global position dari objek, yang mengukur berdasarkan ax utama global, yang bisa dilihat jika objek ditempatkan ditengah axis akan mengembalikan 0,0. Namun, posisi pada visualisasi mengembalikan local position, yang menjelaskan posisi berdasarkan scene.
 Posisi pesawat akan berubah ketika Position dirubah, dan arah pesawat menghadapi akan juga berubah ketika Rotation dirubah. Ketika scale diubah, ukuran pesawat juga akan berubah, namun, ketika di playtest, perubahan akan di-override oleh physics engine, dan perubahan ukuran tidak akan ada.
 
 Pada scene MainLevel, perhatikan nilai atribut Position node PlatformBlue, StonePlatform, dan StonePlatform2. Mengapa nilai Position node StonePlatform dan StonePlatform2 tidak sesuai dengan posisinya di dalam scene (menurut Inspector) namun visualisasinya berada di posisi yang tepat?
-Nilai position node, yang ditampilkan di Node2D merupakan 
+
+Nilai position node, yang ditampilkan di Node2D di Inspector merupakan global position dari objek, yang mengukur berdasarkan ax utama global, yang bisa dilihat jika objek ditempatkan ditengah axis akan mengembalikan 0,0. Namun, posisi pada visualisasi mengembalikan local position, yang menjelaskan posisi berdasarkan scene.
