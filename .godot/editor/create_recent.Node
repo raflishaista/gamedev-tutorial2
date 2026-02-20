@@ -1,0 +1,8 @@
+Sprite2D
+CollisionShape2D
+StaticBody2D
+Area2D
+VisibleOnScreenNotifier2D
+RigidBody2D
+Node2D
+Node

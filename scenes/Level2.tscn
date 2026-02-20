@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://bubbyvfgdow4i"]
+
+[ext_resource type="Script" uid="uid://bsuv2svmaqypq" path="res://scenes/PlatformBlue.gd" id="1_sp0w3"]
+[ext_resource type="Script" uid="uid://bnp58ca0benvd" path="res://scenes/background.gd" id="2_0jmjk"]
+[ext_resource type="PackedScene" uid="uid://t6gbgn5xsgiv" path="res://scenes/PlatformBaru.tscn" id="2_4p0dt"]
+[ext_resource type="PackedScene" uid="uid://y5a4e3ajuy2r" path="res://scenes/StonePlatform.tscn" id="2_qe5b6"]
+[ext_resource type="PackedScene" uid="uid://datfp8kxjrjg" path="res://scenes/BlueShip.tscn" id="3_4p0dt"]
+[ext_resource type="Script" uid="uid://x2rdmjyr1ttw" path="res://scenes/ObjectiveArea.gd" id="4_qwp14"]
+[ext_resource type="Script" uid="uid://dsamfoc5k4wk2" path="res://scenes/platform_baru.gd" id="5_4p0dt"]
+[ext_resource type="PackedScene" uid="uid://c2fth2txgmvvk" path="res://scenes/NewShip.tscn" id="7_qwp14"]
+[ext_resource type="Texture2D" uid="uid://bq2e2we7ixkdu" path="res://assets/nft.png" id="8_0jmjk"]
+[ext_resource type="Texture2D" uid="uid://ywno18n3cd2" path="res://assets/asepritecircle.png" id="10_v8268"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jmjk"]
+size = Vector2(1152, 31)
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(138.75, 79)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rcugv"]
+radius = 32.649654
+
+[node name="MainLevel" type="Node" unique_id=832108525]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=874683390]
+light_mask = 8
+visibility_layer = 8
+position = Vector2(568.00006, 343)
+scale = Vector2(0.60839444, 0.60575783)
+texture = ExtResource("8_0jmjk")
+script = ExtResource("2_0jmjk")
+
+[node name="KillZone2" type="Area2D" parent="." unique_id=1126308352]
+position = Vector2(41.00006, 291)
+scale = Vector2(1.0424391, 0.60575783)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone2" unique_id=1561118504]
+position = Vector2(501, 618.5)
+shape = SubResource("RectangleShape2D_0jmjk")
+
+[node name="KillZone3" type="Area2D" parent="." unique_id=335231370]
+position = Vector2(52, -397)
+scale = Vector2(1.0424391, 0.60575783)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone3" unique_id=948321385]
+position = Vector2(501, 618.5)
+shape = SubResource("RectangleShape2D_0jmjk")
+
+[node name="KillZone4" type="Area2D" parent="." unique_id=1130316948]
+position = Vector2(893, 859)
+rotation = -1.577425
+scale = Vector2(1.0424391, 0.60575783)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone4" unique_id=1924990494]
+position = Vector2(501, 618.5)
+shape = SubResource("RectangleShape2D_0jmjk")
+
+[node name="KillZone5" type="Area2D" parent="." unique_id=1462433779]
+position = Vector2(-653, 873)
+rotation = -1.577425
+scale = Vector2(1.0424391, 0.60575783)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone5" unique_id=1801936118]
+position = Vector2(501, 618.5)
+shape = SubResource("RectangleShape2D_0jmjk")
+
+[node name="PlatformBlue" type="Node2D" parent="." unique_id=1028510209]
+position = Vector2(35, 565)
+script = ExtResource("1_sp0w3")
+
+[node name="StonePlatform" parent="PlatformBlue" unique_id=964098601 instance=ExtResource("2_qe5b6")]
+
+[node name="StonePlatform3" parent="PlatformBlue" unique_id=1205655321 instance=ExtResource("2_qe5b6")]
+position = Vector2(977, 6)
+
+[node name="StonePlatform4" parent="PlatformBlue" unique_id=2049777055 instance=ExtResource("2_qe5b6")]
+position = Vector2(1049, 3)
+
+[node name="StonePlatform2" parent="PlatformBlue" unique_id=1594265889 instance=ExtResource("2_qe5b6")]
+position = Vector2(69, 2)
+
+[node name="BlueShip" parent="." unique_id=150247224 instance=ExtResource("3_4p0dt")]
+position = Vector2(78, 76.99997)
+rotation = 0.02213025
+mass = 60.414
+lock_rotation = true
+
+[node name="NewShip" parent="." unique_id=910160837 instance=ExtResource("7_qwp14")]
+position = Vector2(62, 476)
+
+[node name="ObjectiveArea" type="Area2D" parent="." unique_id=779178061]
+scale = Vector2(1.0612245, 1.3103449)
+script = ExtResource("4_qwp14")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveArea" unique_id=670694693]
+position = Vector2(1015.8078, 44.263157)
+shape = SubResource("1")
+
+[node name="PlatformBayi" type="Node2D" parent="." unique_id=986312552]
+script = ExtResource("5_4p0dt")
+
+[node name="PlatformBaby2" parent="PlatformBayi" unique_id=1124951068 instance=ExtResource("2_4p0dt")]
+position = Vector2(60, 282)
+
+[node name="PlatformBaby" parent="PlatformBayi" unique_id=609034218 instance=ExtResource("2_4p0dt")]
+position = Vector2(-110, 180)
+
+[node name="Obstacle" type="StaticBody2D" parent="." unique_id=455887565]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle" unique_id=1165873415]
+position = Vector2(574, 348)
+shape = SubResource("CircleShape2D_rcugv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Obstacle" unique_id=889068998]
+position = Vector2(565, 354)
+texture = ExtResource("10_v8268")
+
+[connection signal="body_entered" from="KillZone2" to="Background" method="_on_kill_zone_2_body_entered"]
+[connection signal="body_entered" from="KillZone3" to="Background" method="_on_kill_zone_2_body_entered"]
+[connection signal="body_entered" from="KillZone4" to="Background" method="_on_kill_zone_2_body_entered"]
+[connection signal="body_entered" from="KillZone5" to="Background" method="_on_kill_zone_2_body_entered"]
+[connection signal="body_entered" from="ObjectiveArea" to="ObjectiveArea" method="_on_ObjectiveArea_body_entered"]

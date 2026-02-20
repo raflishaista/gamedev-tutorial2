@@ -1,2 +1,11 @@
 res://default_env.tres
+res://scenes/NewShip.tscn
+res://scenes/Level2.tscn
+res://scenes/sprite_2d.gd
+res://scenes/ObjectiveArea.gd
+res://scenes/BlueShip.tscn
+res://scenes/blue_ship.gd
+res://scenes/new_ship.gd
+res://scenes/background.gd
 res://scenes/MainLevel.tscn
+res://scenes/PlatformBlue.gd

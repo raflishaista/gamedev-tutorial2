@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c2fth2txgmvvk"]
+
+[ext_resource type="Texture2D" uid="uid://6th8sgc7iqgu" path="res://assets/pesawat aseprite.png" id="1_wrxsj"]
+[ext_resource type="Script" uid="uid://tbvklondonj5" path="res://scenes/sprite_2d.gd" id="2_583vt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_583vt"]
+size = Vector2(102, 79)
+
+[node name="NewShip" type="RigidBody2D" unique_id=910160837]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1032212578]
+position = Vector2(-4, 4.5)
+shape = SubResource("RectangleShape2D_583vt")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1441630329]
+texture = ExtResource("1_wrxsj")
+script = ExtResource("2_583vt")
