@@ -33,4 +33,4 @@ Posisi pesawat akan berubah ketika Position dirubah, dan arah pesawat menghadapi
 
 Pada scene MainLevel, perhatikan nilai atribut Position node PlatformBlue, StonePlatform, dan StonePlatform2. Mengapa nilai Position node StonePlatform dan StonePlatform2 tidak sesuai dengan posisinya di dalam scene (menurut Inspector) namun visualisasinya berada di posisi yang tepat?
 
-Nilai position node, yang ditampilkan di Node2D di Inspector merupakan global position dari objek, yang mengukur berdasarkan ax utama global, yang bisa dilihat jika objek ditempatkan ditengah axis akan mengembalikan 0,0. Namun, posisi pada visualisasi mengembalikan local position, yang menjelaskan posisi berdasarkan scene.
+Nilai position node, yang ditampilkan di Node2D di Inspector merupakan global position dari objek, yang mengukur berdasarkan axis utama global, yang bisa dilihat jika objek ditempatkan ditengah axis akan mengembalikan 0,0. Namun, posisi pada visualisasi mengembalikan local position, yang menjelaskan posisi berdasarkan scene.
